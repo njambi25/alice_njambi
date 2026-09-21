@@ -581,6 +581,31 @@
   .bs-tl li:first-child{ border-top:none; }
   .bs-tl li b{ color:var(--ink); font-weight:700; }
 
+  
+  /* visual brand-system kit */
+  .bkit{ display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:8px; }
+  .bkit-card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; min-width:0; }
+  .bkit .c4{ grid-column:span 4; } .bkit .c5{ grid-column:span 5; } .bkit .c6{ grid-column:span 6; } .bkit .c7{ grid-column:span 7; } .bkit .c8{ grid-column:span 8; } .bkit .c12{ grid-column:span 12; }
+  @media(max-width:860px){ .bkit{ grid-template-columns:1fr; } .bkit-card{ grid-column:auto!important; } }
+  .bkit-lab{ font-family:var(--body); font-weight:700; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:16px; }
+  .bkit-brand{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:158px; }
+  .bkit-brand img{ max-width:78%; max-height:58px; width:auto; }
+  .kc-row{ display:flex; gap:10px; }
+  .kc{ flex:1; min-width:0; }
+  .kc .sw{ height:60px; border-radius:12px; box-shadow:inset 0 0 0 1px rgba(0,0,0,.08); }
+  .kc .nm{ font-family:var(--body); font-weight:600; font-size:12px; color:var(--ink); margin-top:8px; }
+  .kc .hx{ font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--ink-muted); margin-top:2px; }
+  .kt-face{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .kt-role{ font-family:var(--body); font-size:12.5px; color:var(--ink-muted); margin:4px 0 20px; }
+  .kt-styles{ list-style:none; padding:0; margin:0; }
+  .kt-styles li{ display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding:9px 0; border-top:1px solid var(--line); }
+  .kt-styles li:first-child{ border-top:none; }
+  .kt-styles .stz{ font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--ink-muted); white-space:nowrap; }
+  .kb-row{ display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; }
+  .kb-col{ display:flex; flex-direction:column; gap:9px; }
+  .kb-state{ font-family:var(--body); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-muted); }
+  .kel{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+
   </style>
 
 <div class="topnav">
@@ -656,10 +681,30 @@
           <p>The system is dark by default, the way a stage is. A heavy, condensed display face sets the headlines like a tour poster; an electric blue drives the actions; and a warm amber marks the touring-world details. Light, spacious sections give the product room to breathe between the loud moments.</p>
         </div>
         <div class="wrap">
-          <div class="bs-grid">
-            <div class="bs-card bs-logo" style="background:#0B0B0C"><img src="assets/tourmode-logo.png" alt="TourMode logo"></div>
-            <div class="bs-card"><div class="bs-label">Color</div><div class="bs-sw"><span class="bs-chip" style="background:#060606;"></span><span class="role">Base</span><span class="nm">Ink</span><span class="mono">#060606</span></div><div class="bs-sw"><span class="bs-chip" style="background:#3B5BFF;"></span><span class="role">Primary</span><span class="nm">Blue</span><span class="mono">#3B5BFF</span></div><div class="bs-sw"><span class="bs-chip" style="background:#F5B841;"></span><span class="role">Accent</span><span class="nm">Amber</span><span class="mono">#F5B841</span></div><div class="bs-sw"><span class="bs-chip" style="background:#F2F1ED;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)"></span><span class="role">Neutral</span><span class="nm">Bone</span><span class="mono">#F2F1ED</span></div></div>
-            <div class="bs-card"><div class="bs-label">Type</div><div class="bs-spec" style="font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em">AA BB CC</div><ul class="bs-tl"><li><b>Inter Black</b> &mdash; display, uppercase</li><li><b>Inter</b> &mdash; body &amp; labels</li></ul></div>
+          <div class="bkit">
+            <div class="bkit-card bkit-brand c4" style="background:#0B0B0C"><img src="assets/tourmode-logo.png" alt="TourMode logo"><div style="font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.2em;font-size:10.5px;text-transform:uppercase;color:#F5B841;">Built for touring</div></div>
+            <div class="bkit-card c8"><div class="bkit-lab">Colors</div><div class="kc-row"><div class="kc"><div class="sw" style="background:#060606"></div><div class="nm">Ink</div><div class="hx">#060606</div></div><div class="kc"><div class="sw" style="background:#3B5BFF"></div><div class="nm">Blue</div><div class="hx">#3B5BFF</div></div><div class="kc"><div class="sw" style="background:#F5B841"></div><div class="nm">Amber</div><div class="hx">#F5B841</div></div><div class="kc"><div class="sw" style="background:#F2F1ED"></div><div class="nm">Bone</div><div class="hx">#F2F1ED</div></div><div class="kc"><div class="sw" style="background:#FFFFFF"></div><div class="nm">White</div><div class="hx">#FFFFFF</div></div></div></div>
+            <div class="bkit-card c7"><div class="bkit-lab">Typography</div>
+              <div class="kt-face"><span style="font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:26px;color:var(--ink)">Inter Black</span><span style="font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:50px;line-height:.9;color:var(--ink)">Aa</span></div>
+              <div class="kt-role">Display &middot; uppercase</div>
+              <div class="kt-face"><span style="font-family:'Inter',sans-serif;font-weight:400;font-size:26px;color:var(--ink)">Inter</span><span style="font-family:'Inter',sans-serif;font-weight:400;font-size:46px;line-height:.9;color:var(--ink)">Aa</span></div>
+              <div class="kt-role" style="margin-bottom:0">Body &amp; labels</div></div>
+            <div class="bkit-card c5"><div class="bkit-lab">Text styles</div><ul class="kt-styles">
+              <li><span style="font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:17px;color:var(--ink)">Display</span><span class="stz">Inter &middot; 72</span></li>
+              <li><span style="font-family:'Inter',sans-serif;font-weight:800;text-transform:uppercase;font-size:14px;color:var(--ink)">Heading 1</span><span class="stz">Inter &middot; 44</span></li>
+              <li><span style="font-family:'Inter',sans-serif;font-weight:700;font-size:15px;color:var(--ink)">Heading 2</span><span class="stz">Inter &middot; 28</span></li>
+              <li><span style="font-family:'Inter',sans-serif;font-weight:400;font-size:14px;color:var(--ink)">Body</span><span class="stz">Inter &middot; 18</span></li>
+              <li><span style="font-family:'Inter',sans-serif;font-weight:500;font-size:12px;color:var(--ink)">Caption</span><span class="stz">Inter &middot; 12</span></li></ul></div>
+            <div class="bkit-card c7"><div class="bkit-lab">Buttons</div><div class="kb-row">
+              <div class="kb-col"><span class="kb-state">Primary</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:#fff;background:#3B5BFF;padding:12px 22px;border-radius:10px;">Request early access</span></div>
+              <div class="kb-col"><span class="kb-state">Hover</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:#fff;background:#2A46E6;padding:12px 22px;border-radius:10px;">Request early access</span></div>
+              <div class="kb-col"><span class="kb-state">Secondary</span><span style="font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line-strong);padding:11px 21px;border-radius:10px;">See TourMode in action</span></div></div></div>
+            <div class="bkit-card c5"><div class="bkit-lab">Elements</div>
+              <div class="kel"><span style="font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.2em;font-size:11px;text-transform:uppercase;color:#F5B841;">Built for touring</span></div>
+              <div class="kel" style="margin-top:16px">
+                <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#3B5BFF;background:color-mix(in srgb,#3B5BFF 12%,transparent);border:1px solid color-mix(in srgb,#3B5BFF 30%,transparent);padding:7px 12px;border-radius:8px;">Show day</span>
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--ink-muted);background:var(--surface-2);border:1px solid var(--line);padding:7px 11px;border-radius:8px;">HOUSTON, TX</span>
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--ink-muted);background:var(--surface-2);border:1px solid var(--line);padding:7px 11px;border-radius:8px;">SET 10:00 PM</span></div></div>
           </div>
         </div>
       </section>

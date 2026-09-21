@@ -581,6 +581,31 @@
   .bs-tl li:first-child{ border-top:none; }
   .bs-tl li b{ color:var(--ink); font-weight:700; }
 
+  
+  /* visual brand-system kit */
+  .bkit{ display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:8px; }
+  .bkit-card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:20px; min-width:0; }
+  .bkit .c4{ grid-column:span 4; } .bkit .c5{ grid-column:span 5; } .bkit .c6{ grid-column:span 6; } .bkit .c7{ grid-column:span 7; } .bkit .c8{ grid-column:span 8; } .bkit .c12{ grid-column:span 12; }
+  @media(max-width:860px){ .bkit{ grid-template-columns:1fr; } .bkit-card{ grid-column:auto!important; } }
+  .bkit-lab{ font-family:var(--body); font-weight:700; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:16px; }
+  .bkit-brand{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:158px; }
+  .bkit-brand img{ max-width:78%; max-height:58px; width:auto; }
+  .kc-row{ display:flex; gap:10px; }
+  .kc{ flex:1; min-width:0; }
+  .kc .sw{ height:60px; border-radius:12px; box-shadow:inset 0 0 0 1px rgba(0,0,0,.08); }
+  .kc .nm{ font-family:var(--body); font-weight:600; font-size:12px; color:var(--ink); margin-top:8px; }
+  .kc .hx{ font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--ink-muted); margin-top:2px; }
+  .kt-face{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .kt-role{ font-family:var(--body); font-size:12.5px; color:var(--ink-muted); margin:4px 0 20px; }
+  .kt-styles{ list-style:none; padding:0; margin:0; }
+  .kt-styles li{ display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding:9px 0; border-top:1px solid var(--line); }
+  .kt-styles li:first-child{ border-top:none; }
+  .kt-styles .stz{ font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--ink-muted); white-space:nowrap; }
+  .kb-row{ display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; }
+  .kb-col{ display:flex; flex-direction:column; gap:9px; }
+  .kb-state{ font-family:var(--body); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-muted); }
+  .kel{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+
   </style>
 
 <div class="topnav">
@@ -655,10 +680,24 @@
           <p>The system is built on a heavy, industrial wordmark, a grounded navy, and a high-visibility amber pulled straight from the safety vocabulary of a job site. The tagline, "Built Right. Built to Last," does double duty as a promise and a positioning line.</p>
         </div>
         <div class="wrap">
-          <div class="bs-grid">
-            <div class="bs-card bs-logo" style="background:#FFFFFF"><img src="assets/holder-logo.png" alt="Holder General Engineering logo"></div>
-            <div class="bs-card"><div class="bs-label">Color</div><div class="bs-sw"><span class="bs-chip" style="background:#1E2B4A;"></span><span class="role">Primary</span><span class="nm">Navy</span><span class="mono">#1E2B4A</span></div><div class="bs-sw"><span class="bs-chip" style="background:#F5A623;"></span><span class="role">Accent</span><span class="nm">Amber</span><span class="mono">#F5A623</span></div><div class="bs-sw"><span class="bs-chip" style="background:#292B2C;"></span><span class="role">Base</span><span class="nm">Charcoal</span><span class="mono">#292B2C</span></div><div class="bs-sw"><span class="bs-chip" style="background:#EDEEF0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)"></span><span class="role">Neutral</span><span class="nm">Concrete</span><span class="mono">#EDEEF0</span></div></div>
-            <div class="bs-card"><div class="bs-label">Type</div><ul class="bs-tl"><li><b>Bold condensed</b> &mdash; display &amp; wordmark</li><li><b>Serif</b> &mdash; sub-brand &amp; accents</li></ul></div>
+          <div class="bkit">
+            <div class="bkit-card bkit-brand c4" style="background:#FFFFFF"><img src="assets/holder-logo.png" alt="Holder General Engineering logo"><div style="font-family:var(--display);font-weight:800;letter-spacing:.02em;font-size:12px;text-transform:uppercase;color:#1E2B4A;">Built Right. Built to Last.</div></div>
+            <div class="bkit-card c8"><div class="bkit-lab">Colors</div><div class="kc-row"><div class="kc"><div class="sw" style="background:#1E2B4A"></div><div class="nm">Navy</div><div class="hx">#1E2B4A</div></div><div class="kc"><div class="sw" style="background:#F5A623"></div><div class="nm">Amber</div><div class="hx">#F5A623</div></div><div class="kc"><div class="sw" style="background:#292B2C"></div><div class="nm">Charcoal</div><div class="hx">#292B2C</div></div><div class="kc"><div class="sw" style="background:#EDEEF0"></div><div class="nm">Concrete</div><div class="hx">#EDEEF0</div></div><div class="kc"><div class="sw" style="background:#FFFFFF"></div><div class="nm">White</div><div class="hx">#FFFFFF</div></div></div></div>
+            <div class="bkit-card c6"><div class="bkit-lab">Typography</div>
+              <img src="assets/holder-logo.png" alt="Holder wordmark: a bold condensed display with a serif sub-brand" style="max-height:44px;width:auto;margin:2px 0 18px">
+              <ul class="kt-styles">
+                <li><span style="font-weight:800;font-size:15px;color:var(--ink)">Bold condensed</span><span class="stz">display &amp; wordmark</span></li>
+                <li><span style="font-family:Georgia,'Times New Roman',serif;font-size:16px;color:var(--ink)">Serif</span><span class="stz">sub-brand &amp; accents</span></li></ul>
+              <div class="kt-role" style="margin:12px 0 0">Exact faces confirmed at launch.</div></div>
+            <div class="bkit-card c6"><div class="bkit-lab">Buttons</div><div class="kb-row">
+              <div class="kb-col"><span class="kb-state">Primary</span><span style="font-family:var(--body);font-weight:700;font-size:14px;color:#1E2B4A;background:#F5A623;padding:12px 22px;border-radius:8px;">Get a Project Estimate</span></div>
+              <div class="kb-col"><span class="kb-state">Hover</span><span style="font-family:var(--body);font-weight:700;font-size:14px;color:#1E2B4A;background:#E0921A;padding:12px 22px;border-radius:8px;">Get a Project Estimate</span></div>
+              <div class="kb-col"><span class="kb-state">Secondary</span><span style="font-family:var(--body);font-weight:700;font-size:14px;color:#1E2B4A;background:transparent;border:1.5px solid #1E2B4A;padding:10.5px 20px;border-radius:8px;">Contact Us</span></div></div></div>
+            <div class="bkit-card c12"><div class="bkit-lab">Elements</div>
+              <div class="kel">
+                <span style="font-family:var(--display);font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#1E2B4A;padding:8px 14px;border-radius:6px;">General Engineering</span>
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--ink-muted);background:var(--surface-2);border:1px solid var(--line);padding:7px 12px;border-radius:6px;">CARLSBAD, CA</span>
+                <span style="font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#B5771A;background:color-mix(in srgb,#F5A623 16%,transparent);border:1px solid color-mix(in srgb,#F5A623 40%,transparent);padding:7px 13px;border-radius:100px;">Built to last</span></div></div>
           </div>
         </div>
       </section>
