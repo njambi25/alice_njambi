@@ -658,7 +658,7 @@
   .xcs-chhead h2{ font-size:clamp(30px,4vw,50px); line-height:1.06; letter-spacing:-.03em; margin:18px 0 0; }
   .xcs-body p{ font-family:var(--body); font-size:17px; line-height:1.8; color:var(--ink-muted); margin:0 0 18px; }
   .xcs-body p:last-child{ margin:0; }
-  .xcs-pull, .xcs-body .xcs-pull{ font-family:var(--b-serif); font-weight:600; font-size:clamp(26px,3.2vw,40px); line-height:1.22; letter-spacing:-.005em; color:var(--ink); margin:0 0 28px; }
+  .xcs-pull, .xcs-body .xcs-pull{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(26px,3.2vw,40px); line-height:1.22; letter-spacing:-.005em; color:var(--ink); margin:0 0 28px; }
   .xcs-pull span{ color:var(--b-accent); }
 
   /* full-bleed photo */
@@ -666,7 +666,7 @@
   .xcs-bleed img{ position:absolute; inset:-8% 0; width:100%; height:116%; object-fit:cover; will-change:transform; }
   .xcs-bleed figcaption{ position:absolute; left:0; right:0; bottom:0; padding:80px 32px 26px; background:linear-gradient(transparent, rgba(12,14,10,.62)); color:#F4EEE4; }
   .xcs-bleed figcaption .xcs-wrap{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; padding:0; }
-  .xcs-bleed q{ font-family:var(--b-serif); font-weight:600; font-size:clamp(22px,3vw,38px); line-height:1.15; quotes:none; max-width:20ch; }
+  .xcs-bleed q{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(22px,3vw,38px); line-height:1.15; quotes:none; max-width:20ch; }
   .xcs-bleed small{ font-family:var(--body); font-size:11px; letter-spacing:.16em; text-transform:uppercase; opacity:.8; }
 
   /* brand: logo plate */
@@ -680,7 +680,7 @@
   .xcs-pal{ display:flex; margin-top:22px; border-radius:24px; overflow:hidden; height:clamp(260px,32vw,400px); border:1px solid var(--line); }
   .xcs-sw{ position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:22px; min-width:0; transition:flex-grow .6s cubic-bezier(.2,.7,.2,1); }
   .xcs-sw:hover{ flex-grow:calc(var(--g) * 1.35); }
-  .xcs-sw b{ font-family:var(--b-serif); font-weight:600; font-size:clamp(18px,2vw,26px); line-height:1.1; }
+  .xcs-sw b{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(18px,2vw,26px); line-height:1.1; }
   .xcs-sw span{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px; opacity:.75; margin-top:6px; letter-spacing:.04em; }
   .xcs-sw i{ position:absolute; top:22px; left:22px; font-style:normal; font-family:var(--body); font-weight:600; font-size:10px; letter-spacing:.18em; text-transform:uppercase; opacity:.7; }
   @media (max-width:640px){ .xcs-pal{ flex-direction:column; height:auto; } .xcs-sw{ min-height:92px; flex:none !important; } .xcs-sw i{ top:auto; bottom:22px; left:auto; right:22px; } }
@@ -689,16 +689,16 @@
   .xcs-type{ display:grid; grid-template-columns:1.15fr 1fr; gap:22px; margin-top:22px; }
   @media (max-width:820px){ .xcs-type{ grid-template-columns:1fr; } }
   .xcs-face{ border-radius:24px; padding:clamp(26px,3.4vw,44px); display:flex; flex-direction:column; justify-content:space-between; gap:28px; min-height:360px; }
-  .xcs-face.serif{ background:var(--b-deep); color:var(--b-paper); }
+  .xcs-face.serif{ background:var(--b-deep); color:var(--b-face-ink, var(--b-paper)); }
   .xcs-face.sans{ background:var(--surface); border:1px solid var(--line); color:var(--ink); }
   .xcs-face .lab{ display:flex; justify-content:space-between; font-family:var(--body); font-weight:600; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; opacity:.72; }
   .xcs-face .aa{ font-size:clamp(120px,15vw,200px); line-height:.8; letter-spacing:-.02em; }
-  .xcs-face.serif .aa{ font-family:var(--b-serif); font-weight:600; }
+  .xcs-face.serif .aa{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); }
   .xcs-face.sans .aa{ font-family:var(--b-sans); font-weight:400; font-size:clamp(96px,11vw,150px); }
   .xcs-face .nm{ font-size:clamp(22px,2.4vw,30px); line-height:1.1; }
-  .xcs-face.serif .nm{ font-family:var(--b-serif); font-weight:600; }
+  .xcs-face.serif .nm{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); }
   .xcs-face.sans .nm{ font-family:var(--b-sans); font-weight:700; }
-  .xcs-face .abc{ font-size:14px; line-height:1.6; opacity:.7; margin-top:8px; word-break:break-all; }
+  .xcs-face .abc{ font-size:13px; line-height:1.6; opacity:.7; margin-top:8px; overflow-wrap:anywhere; text-wrap:balance; }
   .xcs-face.serif .abc{ font-family:var(--b-serif); font-size:18px; }
   .xcs-face.sans .abc{ font-family:var(--b-sans); }
 
@@ -708,7 +708,7 @@
   .xcs-use::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(24,30,22,.88) 0%, rgba(24,30,22,.55) 45%, rgba(24,30,22,0) 75%); }
   .xcs-use-in{ position:relative; z-index:2; padding:clamp(28px,5vw,64px); max-width:620px; }
   .xcs-use .ey{ font-family:var(--b-sans); font-weight:700; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--b-accent); }
-  .xcs-use h3{ font-family:var(--b-serif); font-weight:600; font-size:clamp(32px,4.4vw,56px); line-height:1.06; letter-spacing:-.005em; margin:16px 0 18px; }
+  .xcs-use h3{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(32px,4.4vw,56px); line-height:1.06; letter-spacing:-.005em; margin:16px 0 18px; }
   .xcs-use p{ font-family:var(--b-sans); font-size:16px; line-height:1.65; opacity:.86; max-width:44ch; }
   .xcs-use .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
   .xcs-use .btns span{ font-family:var(--b-sans); font-weight:700; font-size:14px; padding:13px 22px; border-radius:8px; }
@@ -767,6 +767,64 @@
   .xcs-next:hover .xcs-next-img img{ transform:scale(1.03); }
   .xcs-alllink{ display:inline-block; margin:18px 0 64px; font-family:var(--body); font-weight:600; font-size:14px; color:var(--ink-muted); text-decoration:none; }
   .xcs-alllink:hover{ color:var(--accent); }
+
+  /* xcs variants: shared by all four case studies */
+  .xcs-stage{ background:var(--b-stage, var(--b-paper)); }
+  .xcs-stage .xcs-browser{ position:relative; max-width:1040px; margin:0 auto -1px; border-radius:14px 14px 0 0; }
+  .xcs-plate{ background:var(--plate,#fff); }
+  .xcs-plate img{ mix-blend-mode:var(--plate-blend,multiply); }
+  .xcs-plate p{ color:var(--plate-ink, var(--b-accent)); }
+  .xcs-use .ey{ color:var(--b-ey, var(--b-accent)); }
+  .xcs-pull span{ color:var(--b-accent-text, var(--b-accent)); }
+  .xcs-flow li:last-child{ color:var(--b-accent-text, var(--b-accent)); }
+  .xcs-use .b1{ color:var(--b-btn-ink, var(--b-ink)); }
+  .xcs-use .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+  .xcs-use .chips span{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:.06em; padding:7px 11px; border-radius:8px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); }
+  .xcs-face.serif .aa{ text-transform:none; }
+  .xcs-flow{ grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:1fr; }
+  @media (max-width:760px){ .xcs-flow{ grid-auto-flow:row; } }
+
+  /* typographic full-bleed band */
+  .xcs-bleed.type{ height:auto; background:var(--b-band, var(--b-ink)); color:#fff; padding:clamp(80px,12vw,170px) 0; }
+  .xcs-bleed.type .ey{ font-family:var(--b-serif); font-weight:var(--b-dw,600); letter-spacing:.2em; font-size:clamp(13px,1.3vw,17px); color:var(--b-accent); text-transform:uppercase; }
+  .xcs-bleed.type .big{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(72px,15vw,236px); line-height:.84; letter-spacing:var(--b-dls,0); margin:18px 0 0; }
+  .xcs-bleed.type .big em{ font-style:normal; color:var(--b-accent); display:block; }
+  .xcs-bleed.type .sub{ font-family:var(--b-serif); font-weight:var(--b-dw,600); text-transform:var(--b-dt,none); font-size:clamp(20px,2.6vw,36px); letter-spacing:.02em; opacity:.62; margin-top:22px; }
+
+  /* website: browser + phone side by side */
+  .xcs-screen.split{ display:grid; grid-template-columns:minmax(0,1fr) clamp(150px,19vw,250px); gap:clamp(20px,4vw,48px); align-items:end; }
+  @media (max-width:640px){ .xcs-screen.split{ grid-template-columns:1fr; justify-items:center; } .xcs-screen.split .xcs-browser{ width:100%; } .xcs-phone{ width:60%; } }
+  .xcs-phone{ margin:0; border-radius:34px; border:7px solid #1C1C1E; overflow:hidden; background:#000; box-shadow:0 40px 70px -30px rgba(0,0,0,.55); }
+  .xcs-phone img{ display:block; width:100%; height:auto; }
+
+  /* before / after pair */
+  .xcs-duo{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:22px; }
+  @media (max-width:720px){ .xcs-duo{ grid-template-columns:1fr; } }
+  .xcs-duo figure{ margin:0; }
+  .xcs-duo .ph{ border-radius:20px; overflow:hidden; aspect-ratio:3/2; background:#0B0B0C; }
+  .xcs-duo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .xcs-duo figure:hover img{ transform:scale(1.03); }
+  .xcs-duo figcaption{ display:flex; justify-content:space-between; gap:14px; margin-top:14px; font-family:var(--body); font-size:13px; color:var(--ink-muted); }
+  .xcs-duo figcaption b{ font-weight:600; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); white-space:nowrap; }
+  .xcs-duo figure.new figcaption b{ color:var(--b-accent); }
+
+  /* commitment ladder */
+  .xcs-sub{ margin-top:clamp(56px,7vw,96px); }
+  .xcs-sub h3{ font-family:var(--display); font-weight:800; font-size:clamp(22px,2.4vw,30px); letter-spacing:-.02em; margin:14px 0 0; }
+  .xcs-ladder{ list-style:none; padding:0; margin:36px 0 0; display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:14px; align-items:end; }
+  .xcs-ladder li{ height:var(--h); display:flex; flex-direction:column; justify-content:flex-end; padding:20px; border-radius:18px; background:var(--surface); border:1px solid var(--line); border-top:3px solid color-mix(in srgb, var(--b-accent) 70%, transparent); }
+  .xcs-ladder li:last-child{ background:var(--b-accent); border-color:var(--b-accent); color:var(--b-btn-ink,#fff); }
+  .xcs-ladder b{ font-family:var(--display); font-weight:800; font-size:16px; line-height:1.25; }
+  .xcs-ladder span{ font-family:var(--body); font-size:12.5px; line-height:1.45; opacity:.72; margin-top:6px; }
+  .xcs-ladder i{ font-style:normal; font-family:var(--body); font-weight:600; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; opacity:.6; margin-bottom:auto; }
+  @media (max-width:720px){ .xcs-ladder{ grid-auto-flow:row; } .xcs-ladder li{ height:auto !important; min-height:110px; } }
+
+  .xcs-result-note{ font-family:var(--body); font-size:17px; line-height:1.75; color:var(--ink-muted); max-width:58ch; margin:26px auto 0; }
+
+  /* next project with a transparent mockup */
+  .xcs-next-img.contain{ background:var(--nbg,#EDEEF0); }
+  .xcs-next-img.contain img{ object-fit:contain; object-position:center bottom; padding:4% 8% 0; }
+
 </style>
 
 <div class="topnav">
@@ -794,7 +852,7 @@
 
 <div id="top"></div>
 
-<main class="xcs" style="--b-deep:#2F4030;--b-accent:#C9924A;--b-ink:#2A2620;--b-paper:#F4EEE4;--b-serif:'Cormorant',Georgia,serif;--b-sans:'Lato',sans-serif;">
+<main class="xcs" style="--b-deep:#2F4030;--b-accent:#C9924A;--b-accent-text:#A06F32;--b-ink:#2A2620;--b-paper:#F4EEE4;--b-serif:'Cormorant',Georgia,serif;--b-sans:'Lato',sans-serif;">
 
   <header class="xcs-hero">
     <div class="xcs-wrap">
@@ -930,9 +988,9 @@
   </section>
 
   <div class="xcs-wrap">
-    <a class="xcs-next rv" href="music-accelerator.html">
-      <div class="xcs-next-top"><div><small>Next project</small><h3>Music Accelerator</h3></div><span class="arw">&rarr;</span></div>
-      <div class="xcs-next-img"><img src="assets/ma-hero.jpg" alt="" loading="lazy"></div>
+    <a class="xcs-next rv" href="tourmode.html">
+      <div class="xcs-next-top"><div><small>Next project</small><h3>TourMode</h3></div><span class="arw">&rarr;</span></div>
+      <div class="xcs-next-img contain" style="--nbg:#EDEEF0"><img src="assets/tourmode-mockup.png" alt="" loading="lazy"></div>
     </a>
     <a class="xcs-alllink" href="index.html#work">&larr; Back to all projects</a>
   </div>
