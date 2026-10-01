@@ -825,6 +825,18 @@
   .xcs-next-img.contain{ background:var(--nbg,#EDEEF0); }
   .xcs-next-img.contain img{ object-fit:contain; object-position:center bottom; padding:4% 8% 0; }
 
+
+  /* what I learned -> what I changed */
+  .xcs-learn{ list-style:none; margin:clamp(36px,4vw,56px) 0 0; padding:0; border-top:1px solid var(--line); }
+  .xcs-learn li{ display:grid; grid-template-columns:56px minmax(0,1fr) 40px minmax(0,1fr); gap:20px; align-items:start; padding:clamp(26px,3vw,38px) 0; border-bottom:1px solid var(--line); }
+  .xcs-learn .n{ font-family:var(--body); font-weight:600; font-size:12px; letter-spacing:.16em; color:var(--ink-muted); padding-top:8px; }
+  .xcs-learn .lab{ display:block; font-family:var(--body); font-weight:600; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:10px; }
+  .xcs-learn .q{ font-family:var(--b-serif); font-weight:var(--b-dw,600); font-size:clamp(20px,2vw,26px); line-height:1.3; color:var(--ink); }
+  .xcs-learn .arw{ color:var(--b-accent-text, var(--b-accent)); font-size:22px; padding-top:30px; text-align:center; }
+  .xcs-learn .a{ font-family:var(--body); font-size:16px; line-height:1.7; color:var(--ink-muted); }
+  .xcs-learn .a b{ color:var(--ink); font-weight:600; }
+  .xcs-learn .chg .lab{ color:var(--b-accent-text, var(--b-accent)); }
+  @media (max-width:760px){ .xcs-learn li{ grid-template-columns:1fr; gap:10px; } .xcs-learn .n{ padding-top:0; } .xcs-learn .arw{ padding-top:0; text-align:left; transform:rotate(90deg); width:22px; } }
 </style>
 
 <div class="topnav">
@@ -979,9 +991,40 @@
     </div>
   </section>
 
+  <section class="xcs-ch" id="learned">
+    <div class="xcs-wrap">
+      <div class="xcs-chhead">
+        <div class="rv"><div class="xcs-num">04 &middot; What I learned</div><h2>What travelers told us, and what changed</h2></div>
+        <div class="xcs-body rv">
+          <p>Coming back to a site I had built years earlier meant I could see how real visitors used it. Three lessons shaped the redesign.</p>
+        </div>
+      </div>
+      <ol class="xcs-learn rv">
+        <li>
+          <span class="n">01</span>
+          <div><span class="lab">What I learned</span><p class="q">Users were looking for important information that was buried in the footer.</p></div>
+          <span class="arw" aria-hidden="true">&rarr;</span>
+          <div class="chg"><span class="lab">What I changed</span><p class="a">Moved <b>Travel Tips</b> from the footer into the main navigation, making it easier to discover.</p></div>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <div><span class="lab">What I learned</span><p class="q">Travelers wanted clearer information about tours, parks, activities, and how to book, not pages of pre-made itineraries.</p></div>
+          <span class="arw" aria-hidden="true">&rarr;</span>
+          <div class="chg"><span class="lab">What I changed</span><p class="a">Reduced the number of example safaris to a <b>small, thoughtfully curated selection</b>, organized around factors such as purpose of travel, group size, and trip length. I also added clearer information about different safari park destinations.</p></div>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <div><span class="lab">What I learned</span><p class="q">Trust matters before making a high-value safari enquiry.</p></div>
+          <span class="arw" aria-hidden="true">&rarr;</span>
+          <div class="chg"><span class="lab">What I changed</span><p class="a">Used <b>real guests, guides, vehicles, reviews, and photography from actual Mzingo safaris</b> throughout the experience as proof and reassurance.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <section class="xcs-result" id="result">
     <div class="xcs-wrap rv">
-      <div class="xcs-num" style="justify-content:center">04 &middot; The result</div>
+      <div class="xcs-num" style="justify-content:center">05 &middot; The result</div>
       <p class="xcs-pull">A brand that looks as considered as the trips it plans, and a site built to turn <span>high-intent travelers</span> into quote requests.</p>
       <p class="xcs-result-note">A returning client: years after I designed their brand and original site, Mzingo trusted me to redesign the website again. It is live at mzingowildadventures.com.</p>
       <a class="xcs-btn" href="https://mzingowildadventures.com/" target="_blank" rel="noopener noreferrer">Visit mzingowildadventures.com &rarr;</a>
