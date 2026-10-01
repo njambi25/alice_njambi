@@ -491,11 +491,9 @@
     <div class="k-about">
       <div class="k-about-text rv">
         <div class="k-num">03 &middot; About</div>
-        <h2>A designer,<br>on land and sea.</h2>
-        <p><b>I'm a designer in San Diego who makes brands and builds their websites.</b> I take a company from a blank page to a finished, responsive site: the identity, the layout, and the front-end that ships it.</p>
-        <p>My background spans brand identity, marketing sites, and product design. Some projects start from nothing, a name and an idea. Others are giving an existing brand a site that finally does it justice. I like both, for different reasons.</p>
-        <div class="k-about-extra" id="aboutMore"><p>I care about the details that make small companies look established: type set with intention, spacing that breathes, a site that is fast and works on every screen. The polish is the point.</p></div>
-        <button class="k-more" id="aboutMoreBtn" type="button" aria-expanded="false" aria-controls="aboutMore">More about me &rarr;</button>
+        <h2>A designer working across brand, web, and product.</h2>
+        <p><b>I'm a Web &amp; Brand Designer in San Diego with a background spanning visual identity, responsive websites, and product design.</b> I enjoy turning complex requirements into digital experiences that feel clear, intentional, and easy to use.</p>
+        <p>My work ranges from building brands and websites from the ground up to designing complex product experiences alongside product managers and engineers. Across both, I care about strong visual craft, thoughtful hierarchy, responsive behavior, and the details that make an experience feel finished.</p>
       </div>
       <figure class="k-portrait rv"><img src="assets/alice-portrait.jpg" alt="Alice Njambi on the deck of a tall ship, smiling in sunglasses and a patterned beanie." loading="lazy"></figure>
       <div class="k-beyond rv">
@@ -623,11 +621,6 @@
   els.forEach(function(e){ io.observe(e); });
 })();
 
-/* about: more */
-(function(){
-  var b=document.getElementById('aboutMoreBtn'), m=document.getElementById('aboutMore'); if(!b||!m) return;
-  b.addEventListener('click',function(){ var o=m.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false'); b.innerHTML=o?'Show less &uarr;':'More about me &rarr;'; });
-})();
 
 /* hero reel: project label follows the video; pause control; respect reduced motion */
 (function(){
