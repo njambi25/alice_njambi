@@ -396,12 +396,12 @@
     </div>
   </div>
   <figure class="k-hero-photo k-hero-reel">
-    <div class="k-reel-win"><div class="k-reel-bar"><i></i><i></i><i></i><span id="reelUrl">music-accelerator.com</span></div>
-    <video id="heroReel" autoplay muted loop playsinline preload="metadata" poster="assets/hero-reel-poster.jpg" aria-label="A reel of four live websites I designed: Music Accelerator, Mzingo Wild Adventures, TourMode, and Holder General Engineering.">
+    <div class="k-reel-win"><div class="k-reel-bar"><i></i><i></i><i></i><span id="reelUrl">holdergeneralengineering.com</span></div>
+    <video id="heroReel" autoplay muted loop playsinline preload="metadata" poster="assets/hero-reel-poster.jpg" aria-label="A reel of four live websites I designed: Holder General Engineering, TourMode, Mzingo Wild Adventures, and Music Accelerator.">
       <source src="assets/hero-reel.webm" type="video/webm">
       <source src="assets/hero-reel.mp4" type="video/mp4">
     </video></div>
-    <a class="k-reel-label" id="reelLabel" href="music-accelerator.html"><span class="dot"></span><span id="reelName">Music Accelerator</span> <span class="go">&rarr;</span></a>
+    <a class="k-reel-label" id="reelLabel" href="holder-general-engineering.html"><span class="dot"></span><span id="reelName">Holder General Engineering</span> <span class="go">&rarr;</span></a>
     <button class="k-reel-toggle" id="reelToggle" type="button" aria-label="Pause the video"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><rect class="ic-pause" x="6" y="5" width="4" height="14" rx="1"/><rect class="ic-pause" x="14" y="5" width="4" height="14" rx="1"/><path class="ic-play" d="M8 5.5v13l11-6.5z" style="display:none"/></svg></button>
   </figure>
 </section>
@@ -629,11 +629,11 @@
 (function(){
   var v=document.getElementById('heroReel'); if(!v) return;
   var label=document.getElementById('reelLabel'), name=document.getElementById('reelName'), btn=document.getElementById('reelToggle');
-  var seg=[['Music Accelerator','music-accelerator.html','music-accelerator.com'],['Mzingo Wild Adventures','mzingo-wild-adventures.html','mzingowildadventures.com'],['TourMode','tourmode.html','tourmode.app'],['Holder General Engineering','holder-general-engineering.html','holdergeneralengineering.com']];
+  var seg=[['Holder General Engineering','holder-general-engineering.html','holdergeneralengineering.com',0],['TourMode','tourmode.html','tourmode.app',5.4],['Mzingo Wild Adventures','mzingo-wild-adventures.html','mzingowildadventures.com',11.2],['Music Accelerator','music-accelerator.html','music-accelerator.com',17]];
   var url=document.getElementById('reelUrl');
   var cur=-1;
   v.addEventListener('timeupdate',function(){
-    var i=Math.min(seg.length-1, Math.floor(v.currentTime/(v.duration/seg.length)||0));
+    var i=0; for(var k=0;k<seg.length;k++){ if(v.currentTime>=seg[k][3]) i=k; }
     if(i!==cur){ cur=i; name.textContent=seg[i][0]; label.href=seg[i][1]; url.textContent=seg[i][2]; }
   });
   function setIcon(){ var p=v.paused; btn.querySelectorAll('.ic-pause').forEach(function(e){e.style.display=p?'none':'';}); btn.querySelector('.ic-play').style.display=p?'':'none'; btn.setAttribute('aria-label',p?'Play the video':'Pause the video'); }
