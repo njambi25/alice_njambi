@@ -837,6 +837,15 @@
   .xcs-learn .a b{ color:var(--ink); font-weight:600; }
   .xcs-learn .chg .lab{ color:var(--b-accent-text, var(--b-accent)); }
   @media (max-width:760px){ .xcs-learn li{ grid-template-columns:1fr; gap:10px; } .xcs-learn .n{ padding-top:0; } .xcs-learn .arw{ padding-top:0; text-align:left; transform:rotate(90deg); width:22px; } }
+
+  /* responsive pass: comfortable tap targets + legible small labels */
+  @media (max-width:1024px){
+    .navleft .navlink, .navright a, .cs-back, .xcs-back, .xcs-meta dd a{ padding-top:7px; padding-bottom:7px; }
+    .k-link{ padding-top:6px; }
+  }
+  @media (max-width:800px){
+    .k-tags, .k-eyebrow, .k-num, .xcs-meta dt, .xcs-cap b, .xcs-sw i, .xcs-num, .xcs-face .lab, .xcs-scale .k, .xcs-learn .lab, .xcs-eyebrow{ font-size:11px !important; }
+  }
 </style>
 
 <div class="topnav">

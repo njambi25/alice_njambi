@@ -825,6 +825,15 @@
   .xcs-next-img.contain{ background:var(--nbg,#EDEEF0); }
   .xcs-next-img.contain img{ object-fit:contain; object-position:center bottom; padding:4% 8% 0; }
 
+
+  /* responsive pass: comfortable tap targets + legible small labels */
+  @media (max-width:1024px){
+    .navleft .navlink, .navright a, .cs-back, .xcs-back, .xcs-meta dd a{ padding-top:7px; padding-bottom:7px; }
+    .k-link{ padding-top:6px; }
+  }
+  @media (max-width:800px){
+    .k-tags, .k-eyebrow, .k-num, .xcs-meta dt, .xcs-cap b, .xcs-sw i, .xcs-num, .xcs-face .lab, .xcs-scale .k, .xcs-learn .lab, .xcs-eyebrow{ font-size:11px !important; }
+  }
 </style>
 
 <div class="topnav">

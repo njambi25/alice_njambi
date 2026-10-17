@@ -359,6 +359,15 @@
   /* about: bio clipped to the portrait's height, with a More toggle */
   .k-bio{ position:relative; overflow:hidden; transition:max-height .5s cubic-bezier(.2,.7,.2,1); }
   .k-bio.clipped::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:64px; background:linear-gradient(color-mix(in srgb, var(--bg) 0%, transparent), var(--bg)); pointer-events:none; }
+
+  /* responsive pass: comfortable tap targets + legible small labels */
+  @media (max-width:1024px){
+    .navleft .navlink, .navright a, .cs-back, .xcs-back, .xcs-meta dd a{ padding-top:7px; padding-bottom:7px; }
+    .k-link{ padding-top:6px; }
+  }
+  @media (max-width:800px){
+    .k-tags, .k-eyebrow, .k-num, .xcs-meta dt, .xcs-cap b, .xcs-sw i, .xcs-num, .xcs-face .lab, .xcs-scale .k, .xcs-learn .lab, .xcs-eyebrow{ font-size:11px !important; }
+  }
 </style>
 
 <div class="topnav">
